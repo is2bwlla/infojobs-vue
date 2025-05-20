@@ -3,8 +3,8 @@ import { ref } from 'vue';
 import axios from 'axios';
 import { useRouter } from 'vue-router';
 
-const username = ref();
-const password = ref();
+const username = ref('');
+const password = ref('');
 
 const router = useRouter();
 
@@ -18,6 +18,7 @@ const logar =() => {
     console.log(e)
   }).finally(() => {
     console.log("Acabou.")
+    router.push('/home')
   })
 }
 
